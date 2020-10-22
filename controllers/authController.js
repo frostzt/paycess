@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
+const Email = require('./../utils/email');
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -19,7 +20,7 @@ const createSendToken = (user, statusCode, req, res) => {
       Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
     ),
     httpOnly: true,
-    secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
+    // secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
   });
 
   user.password = undefined;
@@ -42,8 +43,8 @@ exports.signUp = catchAsync(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm,
   });
 
-  const url = `${req.protocol}://${req.get('host')}/me`;
-  await new Email(newUser, url).sendWelcome();
+  // const url = `${req.protocol}://${req.get('host')}/me`;
+  // await new Email(newUser, url).sendWelcome();
 
   createSendToken(newUser, 201, req, res);
 });
@@ -58,18 +59,20 @@ exports.login = catchAsync(async (req, res, next) => {
   }
 
   // 2. Check if the user exists and the password is correct
-  const user = await User.findOne({ email }).select('+password +active');
+  const user = await User.findOne({ email }).select('+password');
+
+  console.log(user);
 
   if (!user || !(await user.correctPassword(password, user.password))) {
     return next(new AppError('Incorrect email or password.', 401));
   }
 
   // 3. Check if the user has verified his or her id
-  if (!user.active) {
-    return next(
-      new AppError('Sorry you have not yet verified your account.', 401)
-    );
-  }
+  // if (!user.active) {
+  //   return next(
+  //     new AppError('Sorry you have not yet verified your account.', 401)
+  //   );
+  // }
 
   // 4. If everything is fine send token to the client
   createSendToken(user, 200, req, res);
