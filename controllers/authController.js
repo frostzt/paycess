@@ -17,7 +17,7 @@ const createSendToken = (user, statusCode, req, res) => {
 
   res.cookie('jwt', token, {
     expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+      Date.now() + process.env.JWT_EXPIRES_IN * 24 * 60 * 60 * 1000
     ),
     httpOnly: true,
     // secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
@@ -66,11 +66,11 @@ exports.login = catchAsync(async (req, res, next) => {
   }
 
   // 3. Check if the user has verified his or her id
-  // if (!user.active) {
-  //   return next(
-  //     new AppError('Sorry you have not yet verified your account.', 401)
-  //   );
-  // }
+  if (user.active === false) {
+    return next(
+      new AppError('Sorry you have not yet verified your account.', 401)
+    );
+  }
 
   // 4. If everything is fine send token to the client
   createSendToken(user, 200, req, res);
