@@ -10,6 +10,13 @@ const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
+// Trust proxies for heroku
+app.enable('trust proxy');
+
+// Set pug engine🐶
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -27,6 +34,11 @@ app.use(compression());
 
 // Routes
 app.use('/api/v1/users', userRouter);
+
+// 404 Routes for not defined ¯\_(ツ)_/¯
+app.all('*', (req, res, next) => {
+  next(new AppError(`Can't find ${req.url} on this server!`, 404));
+});
 
 // Error handeling Middleware
 app.use(globalErrorHandler);
