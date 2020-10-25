@@ -1,5 +1,5 @@
 {
-  "name": "paycess",
+  "name": "tip",
   "version": "0.0.1",
   "description": "A payment processing application to help you get around (maybe) some stuff!",
   "main": "index.js",
