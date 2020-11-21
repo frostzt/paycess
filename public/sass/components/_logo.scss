@@ -1,9 +1,51 @@
 .logo {
   width: 50vw;
   height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__rectangle {
+    &--1 {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      border: 10px white solid;
+      animation: logoRecInflate 3s ease-in-out infinite;
+    }
+    &--2 {
+      position: absolute;
+      top: 40%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      border: 10px white solid;
+      animation: logoRecInflate 3s ease-in-out reverse infinite;
+    }
+  }
 
   &__image {
     width: 100%;
     height: auto;
+  }
+}
+
+@keyframes logoRecInflate {
+  start {
+    width: 250px;
+    height: 250px;
+  }
+  75% {
+    width: 450px;
+    height: 450px;
+  }
+  end {
+    width: 250px;
+    height: 250px;
   }
 }
