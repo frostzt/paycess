@@ -1,0 +1,11 @@
+@keyframes fadeOutAndIn {
+  start {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  end {
+    opacity: 1;
+  }
+}

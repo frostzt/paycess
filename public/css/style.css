@@ -1,3 +1,11 @@
+@keyframes fadeOutAndIn {
+  start {
+    opacity: 1; }
+  75% {
+    opacity: 0; }
+  end {
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -25,7 +33,7 @@ body {
   width: 50vw;
   height: auto;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%); }
   .logo__image {
@@ -61,7 +69,8 @@ body {
   text-align: center;
   line-height: 7;
   border-radius: 50%;
-  border: 3px solid white; }
+  border: 3px solid white;
+  animation: fadeOutAndIn 2s ease-in-out infinite; }
 
 .section {
   scroll-behavior: smooth; }
