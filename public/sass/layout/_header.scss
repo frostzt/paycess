@@ -1,7 +1,7 @@
 .header {
   height: 100vh;
   width: 100vw;
-  background-color: #272727;
+  background-image: $main-gradient;
 
   &__description {
     color: $default-text-color;
@@ -20,12 +20,8 @@
   position: absolute;
   top: 85%;
   left: 50%;
-  width: 120px;
-  height: 120px;
   transform: translate(-50%, -50%);
   text-align: center;
   line-height: 7;
-  border-radius: 50%;
-  border: 3px solid white;
   animation: fadeOutAndIn 2s ease-in-out infinite;
 }
