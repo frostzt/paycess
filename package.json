@@ -7,7 +7,8 @@
     "start": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production&&nodemon server.js",
     "debug": "ndb server.js",
-    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w"
+    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "dev": "parcel public/overview.html"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.5",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.2"
   }
 }
