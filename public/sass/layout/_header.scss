@@ -2,6 +2,15 @@
   height: 100vh;
   width: 100vw;
   background-color: #272727;
+
+  &__description {
+    color: $default-text-color;
+    font-size: $default-font-size;
+    position: absolute;
+    top: 40%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .next-section {

@@ -55,6 +55,13 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #272727; }
+  .header__description {
+    color: #f6f7eb;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 40%;
+    left: 72%;
+    transform: translate(-50%, -50%); }
 
 .next-section {
   text-decoration: none;
