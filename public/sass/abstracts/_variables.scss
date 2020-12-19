@@ -1,6 +1,7 @@
 // FONT
 $default-font-size: 1.6rem;
 
+// Colors
 $default-text-color: #f6f7eb;
 $main-gradient: radial-gradient(
   circle,
@@ -18,5 +19,11 @@ $main-gradient: radial-gradient(
   #f6d365
 );
 
+$gradient-1: linear-gradient(to top right, #f6d365, #fdc08b);
+
 $color-white: #fff;
 $color-black: #000;
+
+$color-grey-1: rgb(20, 20, 20);
+
+$background-color-1: #f6d365;

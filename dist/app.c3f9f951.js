@@ -117,9 +117,42 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/app.js":[function(require,module,exports) {
+})({"js/menu.js":[function(require,module,exports) {
+"use strict";
 
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+/* eslint-disable */
+var callMenu = function callMenu() {
+  var menu = document.getElementById('menu');
+  var menuLink = document.getElementById('menu-link'); // Add and remove menu
+
+  if (menu.classList.contains('active')) {
+    menu.classList.remove('active');
+  } else {
+    menu.classList.add('active');
+  }
+};
+
+var _default = callMenu;
+exports.default = _default;
+},{}],"js/app.js":[function(require,module,exports) {
+"use strict";
+
+var _menu = _interopRequireDefault(require("./menu"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* eslint-disable */
+// Imports
+// Definitions
+var menuLink = document.getElementById('menu-link'); // Event listeners
+
+menuLink.addEventListener('click', _menu.default);
+},{"./menu":"js/menu.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -147,7 +180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54198" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60721" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
