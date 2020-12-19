@@ -9,3 +9,13 @@
     opacity: 1;
   }
 }
+
+@keyframes inflate {
+  start {
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+  end {
+  }
+}

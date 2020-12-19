@@ -142,10 +142,9 @@ exports.default = _default;
 },{}],"js/cursor.js":[function(require,module,exports) {
 /* eslint-disable */
 var cursor = document.querySelector('.cursor');
-cursor.addEventListener('mousemove', function (e) {
-  cursor.style.left = "".concat(e.pageX, "px");
-  cursor.style.top = "".concat(e.pageY, "px");
-  console.log(e.pageX, e.pageY);
+document.addEventListener('mousemove', function (e) {
+  cursor.style.left = e.pageX + 'px';
+  cursor.style.top = e.pageY + 'px';
 });
 },{}],"js/app.js":[function(require,module,exports) {
 "use strict";
