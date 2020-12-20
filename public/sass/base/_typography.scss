@@ -7,3 +7,27 @@ body {
 .paragraph {
   font-size: $default-font-size;
 }
+
+.heading-secondary {
+  background-image: $gradient-1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.gradient-1 {
+  background-image: $gradient-1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.colored-1 {
+  background-color: #00171f;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

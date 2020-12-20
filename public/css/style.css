@@ -45,6 +45,39 @@ body {
 .paragraph {
   font-size: 1.6rem; }
 
+.heading-secondary {
+  background-image: linear-gradient(to right, #f6d365, #fdc08b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  display: inline-block; }
+
+.gradient-1 {
+  background-image: linear-gradient(to right, #f6d365, #fdc08b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.colored-1 {
+  background-color: #00171f;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.wh-li {
+  font-weight: 300 !important; }
+
+.wh-reg {
+  font-weight: 400 !important; }
+
+.wh-b {
+  font-weight: 700 !important; }
+
+.mar-cen-hor {
+  margin: 0 auto !important; }
+
 .logo {
   width: 50vw;
   height: auto;
@@ -74,7 +107,8 @@ body {
   font-size: 1.6rem;
   top: 5%;
   right: 5%;
-  z-index: 11; }
+  z-index: 11;
+  mix-blend-mode: difference; }
 
 #menu {
   opacity: 0;
@@ -134,7 +168,7 @@ body {
 .section-features {
   width: 100vw;
   height: 100vh;
-  background-color: #f6d365; }
+  background-color: #fff; }
 
 .header {
   height: 100vh;
