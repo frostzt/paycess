@@ -2,4 +2,19 @@
   width: 100vw;
   height: 100vh;
   background-color: $color-white;
+  text-align: left;
+}
+
+.features {
+  &__heading {
+    margin-left: 6rem;
+  }
+  &__paragraph {
+    color: $default-text-color-black;
+    font-size: $default-font-size;
+    margin-left: 6rem;
+    overflow-wrap: break-word;
+    width: 60rem;
+    height: auto;
+  }
 }

@@ -78,6 +78,18 @@ body {
 .mar-cen-hor {
   margin: 0 auto !important; }
 
+.mar-top-small {
+  margin-top: 1rem; }
+
+.mar-top-medium {
+  margin-top: 2rem; }
+
+.mar-top-large {
+  margin-top: 4rem; }
+
+.mar-top-huge {
+  margin-top: 6rem; }
+
 .logo {
   width: 50vw;
   height: auto;
@@ -172,7 +184,19 @@ body {
 .section-features {
   width: 100vw;
   height: 100vh;
-  background-color: #fff; }
+  background-color: #fff;
+  text-align: left; }
+
+.features__heading {
+  margin-left: 6rem; }
+
+.features__paragraph {
+  color: #2c2c2c;
+  font-size: 1.6rem;
+  margin-left: 6rem;
+  overflow-wrap: break-word;
+  width: 60rem;
+  height: auto; }
 
 .header {
   height: 100vh;
