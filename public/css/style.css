@@ -185,7 +185,8 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #fff;
-  text-align: left; }
+  text-align: left;
+  position: relative; }
 
 .features__heading {
   margin-left: 6rem; }
