@@ -192,7 +192,10 @@ body {
     background-color: #fff;
     text-align: right; }
     .section-features-2-paragraph {
-      float: right; }
+      margin-left: 0 !important; }
+    .section-features-2-text {
+      position: absolute;
+      right: 2%; }
 
 .features__heading {
   margin-left: 6rem; }

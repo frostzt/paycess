@@ -10,9 +10,12 @@
     height: 100vh;
     background-color: $color-white;
     text-align: right;
-
     &-paragraph {
-      float: right;
+      margin-left: 0 !important;
+    }
+    &-text {
+      position: absolute;
+      right: 2%;
     }
   }
 }
