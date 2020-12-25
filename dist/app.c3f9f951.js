@@ -150,6 +150,7 @@ document.addEventListener('mousemove', function (e) {
 });
 },{}],"js/animations.js":[function(require,module,exports) {
 /* eslint-disable */
+gsap.registerPlugin(ScrollTrigger);
 gsap.from('#menu-link', {
   x: 300,
   duration: 1,
@@ -167,6 +168,63 @@ logoTL.from('.header__description', {
 });
 logoTL.from('.next-section', {
   opacity: 0,
+  duration: 0.5
+}); // Animation for the first feature-section
+
+var featuresOne = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#sec-features',
+    start: 'top center',
+    end: 'top',
+    scrub: true
+  }
+});
+featuresOne.from('#featuresOne h2', {
+  opacity: 0,
+  x: -500,
+  duration: 1
+});
+featuresOne.from('#featuresOne p', {
+  opacity: 0,
+  y: -100,
+  duration: 0.5
+}); // Animation for the second feature-section
+
+var featuresTwo = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#sec-features-2',
+    start: 'top center',
+    end: 'top',
+    scrub: true
+  }
+});
+featuresTwo.from('#featuresTwo h2', {
+  opacity: 0,
+  x: 500,
+  duration: 1
+});
+featuresTwo.from('#featuresTwo p', {
+  opacity: 0,
+  y: 100,
+  duration: 0.5
+}); // Animation for the second feature-section
+
+var featuresThree = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#sec-features-3',
+    start: 'top center',
+    end: 'top',
+    scrub: true
+  }
+});
+featuresThree.from('#featuresThree h2', {
+  opacity: 0,
+  x: -500,
+  duration: 1
+});
+featuresThree.from('#featuresThree p', {
+  opacity: 0,
+  y: -100,
   duration: 0.5
 });
 },{}],"js/app.js":[function(require,module,exports) {
@@ -214,7 +272,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63757" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64419" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
