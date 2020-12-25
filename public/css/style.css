@@ -51,7 +51,6 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   font-size: 6.4rem;
-  text-transform: uppercase;
   display: inline-block; }
 
 .gradient-1 {
@@ -187,9 +186,18 @@ body {
   background-color: #fff;
   text-align: left;
   position: relative; }
+  .section-features-2 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    text-align: right; }
+    .section-features-2-paragraph {
+      float: right; }
 
 .features__heading {
   margin-left: 6rem; }
+  .features__heading-2 {
+    margin-right: 6rem; }
 
 .features__paragraph {
   color: #2c2c2c;
@@ -197,7 +205,13 @@ body {
   margin-left: 6rem;
   overflow-wrap: break-word;
   width: 60rem;
+  text-align: left;
   height: auto; }
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table; }
 
 .header {
   height: 100vh;

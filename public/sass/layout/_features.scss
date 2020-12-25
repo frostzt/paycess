@@ -4,11 +4,26 @@
   background-color: $color-white;
   text-align: left;
   position: relative;
+
+  &-2 {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-white;
+    text-align: right;
+
+    &-paragraph {
+      float: right;
+    }
+  }
 }
 
 .features {
   &__heading {
     margin-left: 6rem;
+
+    &-2 {
+      margin-right: 6rem;
+    }
   }
   &__paragraph {
     color: $default-text-color-black;
@@ -16,6 +31,13 @@
     margin-left: 6rem;
     overflow-wrap: break-word;
     width: 60rem;
+    text-align: left;
     height: auto;
   }
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
 }

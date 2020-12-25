@@ -148,12 +148,16 @@ document.addEventListener('mousemove', function (e) {
   cursor.style.left = e.pageX + 'px';
   cursor.style.top = e.pageY + 'px';
 });
+},{}],"js/animations.js":[function(require,module,exports) {
+
 },{}],"js/app.js":[function(require,module,exports) {
 "use strict";
 
 var _menu = _interopRequireDefault(require("./menu"));
 
 require("./cursor");
+
+require("./animations");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -163,7 +167,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var menuLink = document.getElementById('menu-link'); // Event listeners
 
 menuLink.addEventListener('click', _menu.default);
-},{"./menu":"js/menu.js","./cursor":"js/cursor.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./menu":"js/menu.js","./cursor":"js/cursor.js","./animations":"js/animations.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -191,7 +195,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62104" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63757" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
