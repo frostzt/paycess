@@ -38,7 +38,8 @@ body {
   box-sizing: border-box; }
 
 .main {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative; }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -222,6 +223,7 @@ body {
 .header {
   height: 100vh;
   width: 100vw;
+  position: relative;
   background-image: linear-gradient(to bottom, transparent, rgba(246, 211, 101, 0.9) 99%), radial-gradient(circle, #fda085, #fea885, #feb086, #feb888, #fdc08b, #fdc489, #fec887, #fdcc85, #fccd7d, #fbcf75, #f9d16d, #f6d365); }
   .header__description {
     color: #f6f7eb;

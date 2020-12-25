@@ -175,7 +175,7 @@ var featuresOne = gsap.timeline({
   scrollTrigger: {
     trigger: '#sec-features',
     start: 'top center',
-    end: 'top',
+    end: 'top 100px',
     scrub: true
   }
 });
@@ -194,7 +194,7 @@ var featuresTwo = gsap.timeline({
   scrollTrigger: {
     trigger: '#sec-features-2',
     start: 'top center',
-    end: 'top',
+    end: 'top 100px',
     scrub: true
   }
 });
@@ -213,7 +213,7 @@ var featuresThree = gsap.timeline({
   scrollTrigger: {
     trigger: '#sec-features-3',
     start: 'top center',
-    end: 'top',
+    end: 'top 100px',
     scrub: true
   }
 });
