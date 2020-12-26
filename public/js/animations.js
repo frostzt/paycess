@@ -48,3 +48,5 @@ let featuresThree = gsap.timeline({
 });
 featuresThree.from('#featuresThree h2', { opacity: 0, x: -500, duration: 1 });
 featuresThree.from('#featuresThree p', { opacity: 0, y: -100, duration: 0.5 });
+
+let secFade = gsap.timeline();
