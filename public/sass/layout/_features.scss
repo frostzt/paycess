@@ -27,6 +27,7 @@
 
     &-2 {
       margin-right: 6rem;
+      position: relative;
     }
   }
   &__paragraph {
@@ -44,4 +45,38 @@
   content: '';
   clear: both;
   display: table;
+}
+
+.featureImage {
+  &__one {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(-50%, -50%);
+    height: 70vh;
+    width: auto;
+
+    &--image {
+      max-width: 100%;
+      max-height: 100%;
+      -webkit-filter: drop-shadow(1rem 0 0.75rem rgba(0, 0, 0, 0.2));
+      filter: drop-shadow(1rem 0 0.75rem rgba(0, 0, 0, 0.2));
+    }
+  }
+
+  &__two {
+    position: absolute;
+    top: 80%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    height: 60vh;
+    width: auto;
+
+    &--image {
+      max-width: 100%;
+      max-height: 100%;
+      -webkit-filter: drop-shadow(1rem 0 0.75rem rgba(0, 0, 0, 0.2));
+      filter: drop-shadow(1rem 0 0.75rem rgba(0, 0, 0, 0.2));
+    }
+  }
 }

@@ -179,6 +179,11 @@ var featuresOne = gsap.timeline({
     scrub: true
   }
 });
+featuresOne.from('.featureImage__one', {
+  opacity: 0,
+  x: 500,
+  duration: 1
+});
 featuresOne.from('#featuresOne h2', {
   opacity: 0,
   x: -500,
@@ -197,6 +202,11 @@ var featuresTwo = gsap.timeline({
     end: 'top 100px',
     scrub: true
   }
+});
+featuresTwo.from('.featureImage__two', {
+  opacity: 0,
+  x: -500,
+  duration: 1
 });
 featuresTwo.from('#featuresTwo h2', {
   opacity: 0,
