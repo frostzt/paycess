@@ -7,6 +7,7 @@ const compression = require('compression');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const userRouter = require('./routes/userRoutes');
+const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use(cookieParser());
 app.use(compression());
 
 // Routes
+app.use('/', viewRouter);
 app.use('/api/v1/users', userRouter);
 
 // 404 Routes for not defined ¯\_(ツ)_/¯

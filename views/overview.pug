@@ -1,0 +1,89 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='css/style.css')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap' rel='stylesheet')
+  title tip | A payment app
+.main
+  .cursor.rem-cursor
+  #menu
+    ul.menu__list
+      li.menu__list--item About
+      li.menu__list--item How it works?
+      li.menu__list--item Features
+      li.menu__list--item Join us
+      li.menu__list--item Contact
+  header.header
+    #menu-link menu
+    .logo
+      img.logo__image(src='img/logo_tip.svg' alt='logo')
+    .header__description
+      | tip, a terminal for payment
+      br
+      | flexible and simple...
+    p.next-section scroll
+  // ---------------------------------------------------------------------
+  section#sec-features.section-features
+    #featuresOne
+      h2.features__heading.heading-secondary.wh-b.mar-top-large
+        | easy as a 
+        span.colored-1.wh-li click
+      .featureImage__one
+        img.featureImage__one--image(src='/img/userprofile.png' alt='Feature Image')
+      p.features__paragraph.mar-top-medium
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+        | accusantium molestias eaque repellendus ipsum corporis possimus, ex
+        | non voluptates, sequi tenetur consequatur iusto dicta sed sunt
+        | ducimus alias expedita facere?
+        br
+        br
+        |             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+        |             eaque vitae reprehenderit accusantium suscipit excepturi rerum, ad
+        |             iusto ea quos natus eveniet iure ex unde illum doloremque
+        |             voluptatem, nostrum blanditiis?
+  // ---------------------------------------------------------------------
+  section#sec-features-2.section-features-2
+    #featuresTwo.section-features-2-text
+      h2.features__heading-2.heading-secondary.wh-b.mar-top-large
+        | faster than a 
+        span.colored-1.wh-li rocket
+      .featureImage__two
+        img.featureImage__two--image(src='/img/rocket.png' alt='Feature Image')
+      p.features__paragraph.section-features-2-paragraph.mar-top-medium
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+        | accusantium molestias eaque repellendus ipsum corporis possimus, ex
+        | non voluptates, sequi tenetur consequatur iusto dicta sed sunt
+        | ducimus alias expedita facere?
+        br
+        br
+        |             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+        |             eaque vitae reprehenderit accusantium suscipit excepturi rerum, ad
+        |             iusto ea quos natus eveniet iure ex unde illum doloremque
+        |             voluptatem, nostrum blanditiis?
+  // ---------------------------------------------------------------------
+  section#sec-features-3.section-features
+    #featuresThree
+      h2.features__heading.heading-secondary.wh-b.mar-top-large
+        | flexible and 
+        span.colored-1.wh-li secure
+      .featureImage__three
+        img.featureImage__three--image(src='/img/secure.png' alt='Feature Image')
+      p.features__paragraph.mar-top-medium
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+        | accusantium molestias eaque repellendus ipsum corporis possimus, ex
+        | non voluptates, sequi tenetur consequatur iusto dicta sed sunt
+        | ducimus alias expedita facere?
+        br
+        br
+        |             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+        |             eaque vitae reprehenderit accusantium suscipit excepturi rerum, ad
+        |             iusto ea quos natus eveniet iure ex unde illum doloremque
+        |             voluptatem, nostrum blanditiis?
+  // ---------------------------------------------------------------------
+  section#section-reviews.sec-reviews
+script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js')
+script(src='./js/bundle.js')
+script(src='./js/three.js')

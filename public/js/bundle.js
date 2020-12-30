@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/menu.js":[function(require,module,exports) {
+})({"menu.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -141,14 +141,14 @@ var callMenu = function callMenu() {
 
 var _default = callMenu;
 exports.default = _default;
-},{}],"js/cursor.js":[function(require,module,exports) {
+},{}],"cursor.js":[function(require,module,exports) {
 /* eslint-disable */
 var cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', function (e) {
   cursor.style.left = e.pageX + 'px';
   cursor.style.top = e.pageY + 'px';
 });
-},{}],"js/animations.js":[function(require,module,exports) {
+},{}],"animations.js":[function(require,module,exports) {
 /* eslint-disable */
 gsap.registerPlugin(ScrollTrigger);
 gsap.from('#menu-link', {
@@ -243,7 +243,7 @@ featuresThree.from('#featuresThree p', {
   duration: 0.5
 });
 var secFade = gsap.timeline();
-},{}],"js/app.js":[function(require,module,exports) {
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _menu = _interopRequireDefault(require("./menu"));
@@ -260,7 +260,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var menuLink = document.getElementById('menu-link'); // Event listeners
 
 menuLink.addEventListener('click', _menu.default);
-},{"./menu":"js/menu.js","./cursor":"js/cursor.js","./animations":"js/animations.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./menu":"menu.js","./cursor":"cursor.js","./animations":"animations.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -288,7 +288,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55854" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49661" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -464,5 +464,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/app.js"], null)
-//# sourceMappingURL=/app.c3f9f951.js.map
+},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+//# sourceMappingURL=/bundle.js.map
