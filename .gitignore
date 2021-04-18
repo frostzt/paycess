@@ -1,8 +1,0 @@
-# Exclude all the folders that aren't needed
-/node_modules
-/.vs
-/.cache
-/dist
-
-# Exclude all the environmental variables
-*.env
