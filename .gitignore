@@ -2,6 +2,7 @@
 /node_modules
 /.vs
 /.cache
+/dist
 
 # Exclude all the environmental variables
 *.env
