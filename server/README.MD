@@ -1,1 +1,1 @@
-tip - A Payment processing application
+# tip - A Payment processing application
