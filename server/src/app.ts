@@ -1,4 +1,8 @@
+// Core or library imports
 import express, { json, Request, Response, NextFunction } from 'express';
+
+// Custom imports
+const GlobalErrorHandler = require('./utils/errorHandler');
 
 // Setup express
 const app = express();
@@ -6,9 +10,6 @@ const app = express();
 // Setup body parser
 app.use(json({ limit: '10kb' }));
 
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  res.status(500).json({ message: err.message });
-  next();
-});
+// app.use(GlobalErrorHandler());
 
 export default app;
