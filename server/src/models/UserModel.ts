@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import bcrypt from 'bcryptjs';
+import { NextFunction } from 'express';
 import { Schema, Model, Document } from 'mongoose';
 
 interface UserInterface extends Document {
@@ -33,5 +34,12 @@ const UserSchema: Schema = new Schema({
   password: {
     type: String,
     required: [true, 'Provide a password!'],
+    minLength: 8,
+    select: false,
   },
+});
+
+// Encrypt Password before save
+UserSchema.pre('save', async function (next: NextFunction) {
+  next();
 });
