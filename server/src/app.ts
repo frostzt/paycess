@@ -10,6 +10,7 @@ const app = express();
 // Setup body parser
 app.use(json({ limit: '10kb' }));
 
-// app.use(GlobalErrorHandler());
+// Handle errors globally
+app.use(GlobalErrorHandler);
 
 export default app;
